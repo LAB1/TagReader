@@ -1,0 +1,84 @@
+E:\VS2013_RTM_ULT_CHS\projects\TagReader\TagReader\bin\Debug\TagReader.exe
+E:\VS2013_RTM_ULT_CHS\projects\TagReader\TagReader\bin\Debug\TagReader.pdb
+E:\VS2013_RTM_ULT_CHS\projects\TagReader\TagReader\obj\Debug\TagReader.csprojResolveAssemblyReference.cache
+E:\VS2013_RTM_ULT_CHS\projects\TagReader\TagReader\obj\Debug\TagReader.Properties.Resources.resources
+E:\VS2013_RTM_ULT_CHS\projects\TagReader\TagReader\obj\Debug\TagReader.csproj.GenerateResource.Cache
+E:\VS2013_RTM_ULT_CHS\projects\TagReader\TagReader\obj\Debug\TagReader.exe
+E:\VS2013_RTM_ULT_CHS\projects\TagReader\TagReader\obj\Debug\TagReader.pdb
+E:\VS2013_RTM_ULT_CHS\projects\TagReader\TagReader\obj\Debug\TagReader.Form_TagReader.resources
+E:\VS2013_RTM_ULT_CHS\projects\TagReader\TagReader\bin\Debug\LLRP.dll
+E:\VS2013_RTM_ULT_CHS\projects\TagReader\TagReader\bin\Debug\LLRP.Impinj.dll
+E:\VS2013_RTM_ULT_CHS\projects\TagReader\TagReader\bin\Debug\log4net.dll
+E:\TagReader\TagReader\obj\Debug\TagReader.exe
+E:\TagReader\TagReader\obj\Debug\TagReader.pdb
+E:\TagReader\TagReader\bin\Debug\TagReader.exe
+E:\TagReader\TagReader\bin\Debug\TagReader.pdb
+E:\TagReader\TagReader\bin\Debug\LLRP.dll
+E:\TagReader\TagReader\bin\Debug\LLRP.Impinj.dll
+E:\TagReader\TagReader\bin\Debug\log4net.dll
+E:\TagReader\TagReader\obj\Debug\TagReader.csprojResolveAssemblyReference.cache
+E:\TagReader\TagReader\obj\Debug\TagReader.Form_TagReader.resources
+E:\TagReader\TagReader\obj\Debug\TagReader.Properties.Resources.resources
+E:\TagReader\TagReader\obj\Debug\TagReader.csproj.GenerateResource.Cache
+C:\Users\MarinYoung\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\obj\Debug\TagReader.exe
+C:\Users\MarinYoung\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\obj\Debug\TagReader.pdb
+C:\Users\Marin\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\obj\Debug\TagReader.exe
+C:\Users\Marin\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\obj\Debug\TagReader.pdb
+C:\Users\Marin\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\bin\Debug\TagReader.exe
+C:\Users\Marin\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\bin\Debug\TagReader.pdb
+C:\Users\Marin\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\bin\Debug\LLRP.dll
+C:\Users\Marin\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\bin\Debug\LLRP.Impinj.dll
+C:\Users\Marin\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\bin\Debug\log4net.dll
+C:\Users\Marin\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\obj\Debug\TagReader.Properties.Resources.resources
+C:\Users\Marin\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\obj\Debug\TagReader.csproj.GenerateResource.Cache
+C:\Users\Marin\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\obj\Debug\TagReader.FormTagReader.resources
+C:\Users\MarinYoung\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\bin\Debug\TagReader.exe
+C:\Users\MarinYoung\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\bin\Debug\TagReader.pdb
+C:\Users\MarinYoung\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\bin\Debug\LLRP.dll
+C:\Users\MarinYoung\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\bin\Debug\LLRP.Impinj.dll
+C:\Users\MarinYoung\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\bin\Debug\log4net.dll
+C:\Users\MarinYoung\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\obj\Debug\TagReader.csprojResolveAssemblyReference.cache
+C:\Users\MarinYoung\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\obj\Debug\TagReader.FormTagReader.resources
+C:\Users\MarinYoung\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\obj\Debug\TagReader.Properties.Resources.resources
+C:\Users\MarinYoung\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\obj\Debug\TagReader.csproj.GenerateResource.Cache
+C:\Users\MarinYoung\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\obj\Debug\TagReader.ProgressWindow.resources
+C:\Users\MarinYoung\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\obj\Debug\TagReader.AboutBox.resources
+C:\Users\MarinYoung\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\obj\Debug\TagReader.SettingsWindow.resources
+C:\Users\Marin\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\obj\Debug\TagReader.AboutBox.resources
+C:\Users\Marin\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\obj\Debug\TagReader.ProgressWindow.resources
+C:\Users\Marin\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\obj\Debug\TagReader.SettingsWindow.resources
+C:\Users\Marin\OneDrive\Documents\Code\RFID-READER\TagReader\TagReader\obj\Debug\TagReader.csprojResolveAssemblyReference.cache
+D:\Microsoft Visual Studio 2013 Ultimate\Projects\TagReader\TagReader\obj\Debug\TagReader.exe
+D:\Microsoft Visual Studio 2013 Ultimate\Projects\TagReader\TagReader\obj\Debug\TagReader.pdb
+D:\Microsoft Visual Studio 2013 Ultimate\Projects\TagReader\TagReader\bin\Debug\TagReader.exe
+D:\Microsoft Visual Studio 2013 Ultimate\Projects\TagReader\TagReader\bin\Debug\TagReader.pdb
+D:\Microsoft Visual Studio 2013 Ultimate\Projects\TagReader\TagReader\bin\Debug\LLRP.dll
+D:\Microsoft Visual Studio 2013 Ultimate\Projects\TagReader\TagReader\bin\Debug\LLRP.Impinj.dll
+D:\Microsoft Visual Studio 2013 Ultimate\Projects\TagReader\TagReader\bin\Debug\log4net.dll
+D:\Microsoft Visual Studio 2013 Ultimate\Projects\TagReader\TagReader\obj\Debug\TagReader.csprojResolveAssemblyReference.cache
+D:\Microsoft Visual Studio 2013 Ultimate\Projects\TagReader\TagReader\obj\Debug\TagReader.AboutBox.resources
+D:\Microsoft Visual Studio 2013 Ultimate\Projects\TagReader\TagReader\obj\Debug\TagReader.FormTagReader.resources
+D:\Microsoft Visual Studio 2013 Ultimate\Projects\TagReader\TagReader\obj\Debug\TagReader.ProgressWindow.resources
+D:\Microsoft Visual Studio 2013 Ultimate\Projects\TagReader\TagReader\obj\Debug\TagReader.Properties.Resources.resources
+D:\Microsoft Visual Studio 2013 Ultimate\Projects\TagReader\TagReader\obj\Debug\TagReader.SettingsWindow.resources
+D:\Microsoft Visual Studio 2013 Ultimate\Projects\TagReader\TagReader\obj\Debug\TagReader.csproj.GenerateResource.Cache
+E:\TagReader\TagReader\TagReader\bin\Debug\TagReader.exe
+E:\TagReader\TagReader\TagReader\bin\Debug\TagReader.pdb
+E:\TagReader\TagReader\TagReader\bin\Debug\LLRP.dll
+E:\TagReader\TagReader\TagReader\bin\Debug\LLRP.Impinj.dll
+E:\TagReader\TagReader\TagReader\bin\Debug\log4net.dll
+E:\TagReader\TagReader\TagReader\obj\Debug\TagReader.csprojAssemblyReference.cache
+E:\TagReader\TagReader\TagReader\obj\Debug\TagReader.AboutBox.resources
+E:\TagReader\TagReader\TagReader\obj\Debug\TagReader.FormTagReader.resources
+E:\TagReader\TagReader\TagReader\obj\Debug\TagReader.ProgressWindow.resources
+E:\TagReader\TagReader\TagReader\obj\Debug\TagReader.Properties.Resources.resources
+E:\TagReader\TagReader\TagReader\obj\Debug\TagReader.SettingsWindow.resources
+E:\TagReader\TagReader\TagReader\obj\Debug\TagReader.csproj.GenerateResource.cache
+E:\TagReader\TagReader\TagReader\obj\Debug\TagReader.csproj.CoreCompileInputs.cache
+E:\TagReader\TagReader\TagReader\obj\Debug\TagReader.csproj.CopyComplete
+E:\TagReader\TagReader\TagReader\obj\Debug\TagReader.exe
+E:\TagReader\TagReader\TagReader\obj\Debug\TagReader.pdb
+E:\TagReader\TagReader\TagReader\obj\Debug\TagReader.KinectDisplay.resources
+E:\TagReader\TagReader\TagReader\bin\Debug\TagReader.exe.config
+E:\TagReader\TagReader\TagReader\bin\Debug\Microsoft.Kinect.dll
+E:\TagReader\TagReader\TagReader\bin\Debug\Microsoft.Kinect.xml
