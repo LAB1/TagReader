@@ -123,9 +123,9 @@ namespace TagReader
             this.columnHeader_TagCount});
             this.listView_Data.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView_Data.GridLines = true;
-            this.listView_Data.Location = new System.Drawing.Point(12, 48);
+            this.listView_Data.Location = new System.Drawing.Point(12, 52);
             this.listView_Data.Name = "listView_Data";
-            this.listView_Data.Size = new System.Drawing.Size(897, 245);
+            this.listView_Data.Size = new System.Drawing.Size(897, 265);
             this.listView_Data.TabIndex = 9;
             this.listView_Data.UseCompatibleStateImageBehavior = false;
             this.listView_Data.View = System.Windows.Forms.View.Details;
@@ -198,9 +198,9 @@ namespace TagReader
             legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
             legend1.Name = "Legend1";
             this.chart_Rssi.Legends.Add(legend1);
-            this.chart_Rssi.Location = new System.Drawing.Point(12, 329);
+            this.chart_Rssi.Location = new System.Drawing.Point(12, 356);
             this.chart_Rssi.Name = "chart_Rssi";
-            this.chart_Rssi.Size = new System.Drawing.Size(283, 236);
+            this.chart_Rssi.Size = new System.Drawing.Size(283, 256);
             this.chart_Rssi.TabIndex = 13;
             this.chart_Rssi.Text = "chart_Rssi";
             title1.Name = "Title_Rssi";
@@ -227,9 +227,9 @@ namespace TagReader
             legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
             legend2.Name = "Legend2";
             this.chart_Phase.Legends.Add(legend2);
-            this.chart_Phase.Location = new System.Drawing.Point(319, 329);
+            this.chart_Phase.Location = new System.Drawing.Point(319, 356);
             this.chart_Phase.Name = "chart_Phase";
-            this.chart_Phase.Size = new System.Drawing.Size(283, 236);
+            this.chart_Phase.Size = new System.Drawing.Size(283, 256);
             this.chart_Phase.TabIndex = 14;
             this.chart_Phase.Text = "chart_Phase";
             title2.Name = "Title_Phase";
@@ -255,9 +255,9 @@ namespace TagReader
             legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
             legend3.Name = "Legend3";
             this.chart_Doppler.Legends.Add(legend3);
-            this.chart_Doppler.Location = new System.Drawing.Point(626, 329);
+            this.chart_Doppler.Location = new System.Drawing.Point(626, 356);
             this.chart_Doppler.Name = "chart_Doppler";
-            this.chart_Doppler.Size = new System.Drawing.Size(283, 236);
+            this.chart_Doppler.Size = new System.Drawing.Size(283, 256);
             this.chart_Doppler.TabIndex = 15;
             this.chart_Doppler.Text = "chart_Doppler";
             title3.Name = "Title_Doppler";
@@ -268,7 +268,7 @@ namespace TagReader
             // 
             this.label_EPC.AutoSize = true;
             this.label_EPC.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_EPC.Location = new System.Drawing.Point(12, 300);
+            this.label_EPC.Location = new System.Drawing.Point(12, 325);
             this.label_EPC.Name = "label_EPC";
             this.label_EPC.Size = new System.Drawing.Size(31, 15);
             this.label_EPC.TabIndex = 16;
@@ -277,16 +277,16 @@ namespace TagReader
             // comboBoxEPCs
             // 
             this.comboBoxEPCs.FormattingEnabled = true;
-            this.comboBoxEPCs.Location = new System.Drawing.Point(49, 298);
+            this.comboBoxEPCs.Location = new System.Drawing.Point(49, 323);
             this.comboBoxEPCs.Name = "comboBoxEPCs";
-            this.comboBoxEPCs.Size = new System.Drawing.Size(174, 20);
+            this.comboBoxEPCs.Size = new System.Drawing.Size(174, 21);
             this.comboBoxEPCs.TabIndex = 17;
             // 
             // label_Antenna
             // 
             this.label_Antenna.AutoSize = true;
             this.label_Antenna.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Antenna.Location = new System.Drawing.Point(261, 300);
+            this.label_Antenna.Location = new System.Drawing.Point(261, 325);
             this.label_Antenna.Name = "label_Antenna";
             this.label_Antenna.Size = new System.Drawing.Size(58, 15);
             this.label_Antenna.TabIndex = 18;
@@ -295,9 +295,9 @@ namespace TagReader
             // comboBoxAntennas
             // 
             this.comboBoxAntennas.FormattingEnabled = true;
-            this.comboBoxAntennas.Location = new System.Drawing.Point(325, 298);
+            this.comboBoxAntennas.Location = new System.Drawing.Point(325, 323);
             this.comboBoxAntennas.Name = "comboBoxAntennas";
-            this.comboBoxAntennas.Size = new System.Drawing.Size(121, 20);
+            this.comboBoxAntennas.Size = new System.Drawing.Size(121, 21);
             this.comboBoxAntennas.TabIndex = 19;
             // 
             // menuStrip1
@@ -308,7 +308,7 @@ namespace TagReader
             this.settingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(921, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(921, 24);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -318,21 +318,22 @@ namespace TagReader
             this.ToolStripMenuItem_Save,
             this.ToolStripMenuItem_Copy});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(39, 21);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
             // ToolStripMenuItem_Save
             // 
             this.ToolStripMenuItem_Save.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuItem_Save.Image")));
             this.ToolStripMenuItem_Save.Name = "ToolStripMenuItem_Save";
-            this.ToolStripMenuItem_Save.Size = new System.Drawing.Size(106, 22);
+            this.ToolStripMenuItem_Save.Size = new System.Drawing.Size(102, 22);
             this.ToolStripMenuItem_Save.Text = "Save";
             this.ToolStripMenuItem_Save.Click += new System.EventHandler(this.button_Export_Click);
             // 
             // ToolStripMenuItem_Copy
             // 
             this.ToolStripMenuItem_Copy.Name = "ToolStripMenuItem_Copy";
-            this.ToolStripMenuItem_Copy.Size = new System.Drawing.Size(106, 22);
+            this.ToolStripMenuItem_Copy.Size = new System.Drawing.Size(102, 22);
             this.ToolStripMenuItem_Copy.Text = "Copy";
             // 
             // debugToolStripMenuItem
@@ -342,14 +343,14 @@ namespace TagReader
             this.ToolStripMenuItem_Start,
             this.ToolStripMenuItem_Stop});
             this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            this.debugToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.debugToolStripMenuItem.Text = "Debug";
             // 
             // ToolStripMenuItem_Connect
             // 
             this.ToolStripMenuItem_Connect.Image = global::TagReader.Properties.Resources.ic_link;
             this.ToolStripMenuItem_Connect.Name = "ToolStripMenuItem_Connect";
-            this.ToolStripMenuItem_Connect.Size = new System.Drawing.Size(123, 22);
+            this.ToolStripMenuItem_Connect.Size = new System.Drawing.Size(119, 22);
             this.ToolStripMenuItem_Connect.Text = "Connect";
             this.ToolStripMenuItem_Connect.Click += new System.EventHandler(this.button_Connect_Click);
             // 
@@ -357,7 +358,7 @@ namespace TagReader
             // 
             this.ToolStripMenuItem_Start.Image = global::TagReader.Properties.Resources.play;
             this.ToolStripMenuItem_Start.Name = "ToolStripMenuItem_Start";
-            this.ToolStripMenuItem_Start.Size = new System.Drawing.Size(123, 22);
+            this.ToolStripMenuItem_Start.Size = new System.Drawing.Size(119, 22);
             this.ToolStripMenuItem_Start.Text = "Start";
             this.ToolStripMenuItem_Start.Click += new System.EventHandler(this.button_Start_Click);
             // 
@@ -365,7 +366,7 @@ namespace TagReader
             // 
             this.ToolStripMenuItem_Stop.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuItem_Stop.Image")));
             this.ToolStripMenuItem_Stop.Name = "ToolStripMenuItem_Stop";
-            this.ToolStripMenuItem_Stop.Size = new System.Drawing.Size(123, 22);
+            this.ToolStripMenuItem_Stop.Size = new System.Drawing.Size(119, 22);
             this.ToolStripMenuItem_Stop.Text = "Stop";
             this.ToolStripMenuItem_Stop.Click += new System.EventHandler(this.button_Stop_Click);
             // 
@@ -377,14 +378,14 @@ namespace TagReader
             this.ToolStripMenuItem_Help,
             this.ToolStripMenuItem_About});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(66, 21);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.settingsToolStripMenuItem.Text = "Settings";
             // 
             // ToolStripMenuItem_Settings
             // 
             this.ToolStripMenuItem_Settings.Image = global::TagReader.Properties.Resources.settings;
             this.ToolStripMenuItem_Settings.Name = "ToolStripMenuItem_Settings";
-            this.ToolStripMenuItem_Settings.Size = new System.Drawing.Size(122, 22);
+            this.ToolStripMenuItem_Settings.Size = new System.Drawing.Size(116, 22);
             this.ToolStripMenuItem_Settings.Text = "Settings";
             this.ToolStripMenuItem_Settings.Click += new System.EventHandler(this.button_Settings_Click);
             // 
@@ -394,7 +395,7 @@ namespace TagReader
             this.quickAccessToolStripMenuItem,
             this.readerSettingsToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // quickAccessToolStripMenuItem
@@ -402,7 +403,7 @@ namespace TagReader
             this.quickAccessToolStripMenuItem.Checked = true;
             this.quickAccessToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.quickAccessToolStripMenuItem.Name = "quickAccessToolStripMenuItem";
-            this.quickAccessToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.quickAccessToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.quickAccessToolStripMenuItem.Text = "Quick Access";
             this.quickAccessToolStripMenuItem.Click += new System.EventHandler(this.quickAccessToolStripMenuItem_Click);
             // 
@@ -411,14 +412,14 @@ namespace TagReader
             this.readerSettingsToolStripMenuItem.Checked = true;
             this.readerSettingsToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.readerSettingsToolStripMenuItem.Name = "readerSettingsToolStripMenuItem";
-            this.readerSettingsToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.readerSettingsToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.readerSettingsToolStripMenuItem.Text = "Reader Settings";
             this.readerSettingsToolStripMenuItem.Click += new System.EventHandler(this.readerSettingsToolStripMenuItem_Click);
             // 
             // ToolStripMenuItem_Help
             // 
             this.ToolStripMenuItem_Help.Name = "ToolStripMenuItem_Help";
-            this.ToolStripMenuItem_Help.Size = new System.Drawing.Size(122, 22);
+            this.ToolStripMenuItem_Help.Size = new System.Drawing.Size(116, 22);
             this.ToolStripMenuItem_Help.Text = "Help";
             this.ToolStripMenuItem_Help.Click += new System.EventHandler(this.ToolStripMenuItem_Help_Click);
             // 
@@ -426,7 +427,7 @@ namespace TagReader
             // 
             this.ToolStripMenuItem_About.Image = global::TagReader.Properties.Resources.about;
             this.ToolStripMenuItem_About.Name = "ToolStripMenuItem_About";
-            this.ToolStripMenuItem_About.Size = new System.Drawing.Size(122, 22);
+            this.ToolStripMenuItem_About.Size = new System.Drawing.Size(116, 22);
             this.ToolStripMenuItem_About.Text = "About";
             this.ToolStripMenuItem_About.Click += new System.EventHandler(this.ToolStripMenuItem_About_Click);
             // 
@@ -443,9 +444,9 @@ namespace TagReader
             this.toolStripButton_Refresh,
             this.toolStripSeparator2,
             this.toolStripButton_Settings});
-            this.toolStrip_QuickAccess.Location = new System.Drawing.Point(0, 22);
+            this.toolStrip_QuickAccess.Location = new System.Drawing.Point(0, 24);
             this.toolStrip_QuickAccess.Name = "toolStrip_QuickAccess";
-            this.toolStrip_QuickAccess.Size = new System.Drawing.Size(468, 25);
+            this.toolStrip_QuickAccess.Size = new System.Drawing.Size(438, 25);
             this.toolStrip_QuickAccess.TabIndex = 21;
             this.toolStrip_QuickAccess.Text = "toolStrip1";
             // 
@@ -454,7 +455,7 @@ namespace TagReader
             this.toolStripButton_Save.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_Save.Image")));
             this.toolStripButton_Save.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Save.Name = "toolStripButton_Save";
-            this.toolStripButton_Save.Size = new System.Drawing.Size(55, 22);
+            this.toolStripButton_Save.Size = new System.Drawing.Size(51, 22);
             this.toolStripButton_Save.Tag = "";
             this.toolStripButton_Save.Text = "Save";
             this.toolStripButton_Save.Click += new System.EventHandler(this.button_Export_Click);
@@ -469,7 +470,7 @@ namespace TagReader
             this.toolStripButton_Connect.Image = global::TagReader.Properties.Resources.ic_link;
             this.toolStripButton_Connect.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Connect.Name = "toolStripButton_Connect";
-            this.toolStripButton_Connect.Size = new System.Drawing.Size(75, 22);
+            this.toolStripButton_Connect.Size = new System.Drawing.Size(72, 22);
             this.toolStripButton_Connect.Text = "Connect";
             this.toolStripButton_Connect.Click += new System.EventHandler(this.button_Connect_Click);
             // 
@@ -478,7 +479,7 @@ namespace TagReader
             this.toolStripButton_Start.Image = global::TagReader.Properties.Resources.play;
             this.toolStripButton_Start.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Start.Name = "toolStripButton_Start";
-            this.toolStripButton_Start.Size = new System.Drawing.Size(55, 22);
+            this.toolStripButton_Start.Size = new System.Drawing.Size(51, 22);
             this.toolStripButton_Start.Text = "Start";
             this.toolStripButton_Start.Click += new System.EventHandler(this.button_Start_Click);
             // 
@@ -487,7 +488,7 @@ namespace TagReader
             this.toolStripButton_Stop.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_Stop.Image")));
             this.toolStripButton_Stop.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Stop.Name = "toolStripButton_Stop";
-            this.toolStripButton_Stop.Size = new System.Drawing.Size(55, 22);
+            this.toolStripButton_Stop.Size = new System.Drawing.Size(51, 22);
             this.toolStripButton_Stop.Text = "Stop";
             this.toolStripButton_Stop.Click += new System.EventHandler(this.button_Stop_Click);
             // 
@@ -496,7 +497,7 @@ namespace TagReader
             this.toolStripButton_Clear.Image = global::TagReader.Properties.Resources.delete;
             this.toolStripButton_Clear.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Clear.Name = "toolStripButton_Clear";
-            this.toolStripButton_Clear.Size = new System.Drawing.Size(58, 22);
+            this.toolStripButton_Clear.Size = new System.Drawing.Size(54, 22);
             this.toolStripButton_Clear.Text = "Clear";
             this.toolStripButton_Clear.Click += new System.EventHandler(this.button_Clear_Click);
             // 
@@ -505,7 +506,7 @@ namespace TagReader
             this.toolStripButton_Refresh.Image = global::TagReader.Properties.Resources.refresh;
             this.toolStripButton_Refresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Refresh.Name = "toolStripButton_Refresh";
-            this.toolStripButton_Refresh.Size = new System.Drawing.Size(72, 22);
+            this.toolStripButton_Refresh.Size = new System.Drawing.Size(66, 22);
             this.toolStripButton_Refresh.Text = "Refresh";
             this.toolStripButton_Refresh.Click += new System.EventHandler(this.toolStripButton_Refresh_Click);
             // 
@@ -519,7 +520,7 @@ namespace TagReader
             this.toolStripButton_Settings.Image = global::TagReader.Properties.Resources.settings;
             this.toolStripButton_Settings.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Settings.Name = "toolStripButton_Settings";
-            this.toolStripButton_Settings.Size = new System.Drawing.Size(74, 22);
+            this.toolStripButton_Settings.Size = new System.Drawing.Size(69, 22);
             this.toolStripButton_Settings.Text = "Settings";
             this.toolStripButton_Settings.Click += new System.EventHandler(this.button_Settings_Click);
             // 
@@ -533,55 +534,55 @@ namespace TagReader
             this.toolStripStatusLabel_NameEvent,
             this.toolStripStatusLabel_TotalEvent,
             this.toolStripStatusLabel_RunTime});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 568);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 616);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(921, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(921, 23);
             this.statusStrip1.TabIndex = 22;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel_Message
             // 
             this.toolStripStatusLabel_Message.Name = "toolStripStatusLabel_Message";
-            this.toolStripStatusLabel_Message.Size = new System.Drawing.Size(543, 17);
+            this.toolStripStatusLabel_Message.Size = new System.Drawing.Size(568, 18);
             this.toolStripStatusLabel_Message.Spring = true;
             this.toolStripStatusLabel_Message.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // toolStripProgressBar
             // 
             this.toolStripProgressBar.Name = "toolStripProgressBar";
-            this.toolStripProgressBar.Size = new System.Drawing.Size(100, 16);
+            this.toolStripProgressBar.Size = new System.Drawing.Size(100, 17);
             // 
             // toolStripStatusLabel_NameReport
             // 
             this.toolStripStatusLabel_NameReport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripStatusLabel_NameReport.Name = "toolStripStatusLabel_NameReport";
-            this.toolStripStatusLabel_NameReport.Size = new System.Drawing.Size(81, 17);
+            this.toolStripStatusLabel_NameReport.Size = new System.Drawing.Size(71, 18);
             this.toolStripStatusLabel_NameReport.Text = "Total Report";
             // 
             // toolStripStatusLabel_TotalReport
             // 
             this.toolStripStatusLabel_TotalReport.Name = "toolStripStatusLabel_TotalReport";
-            this.toolStripStatusLabel_TotalReport.Size = new System.Drawing.Size(15, 17);
+            this.toolStripStatusLabel_TotalReport.Size = new System.Drawing.Size(13, 18);
             this.toolStripStatusLabel_TotalReport.Text = "0";
             // 
             // toolStripStatusLabel_NameEvent
             // 
             this.toolStripStatusLabel_NameEvent.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripStatusLabel_NameEvent.Name = "toolStripStatusLabel_NameEvent";
-            this.toolStripStatusLabel_NameEvent.Size = new System.Drawing.Size(72, 17);
+            this.toolStripStatusLabel_NameEvent.Size = new System.Drawing.Size(65, 18);
             this.toolStripStatusLabel_NameEvent.Text = "Total Event";
             // 
             // toolStripStatusLabel_TotalEvent
             // 
             this.toolStripStatusLabel_TotalEvent.Name = "toolStripStatusLabel_TotalEvent";
-            this.toolStripStatusLabel_TotalEvent.Size = new System.Drawing.Size(15, 17);
+            this.toolStripStatusLabel_TotalEvent.Size = new System.Drawing.Size(13, 18);
             this.toolStripStatusLabel_TotalEvent.Text = "0";
             // 
             // toolStripStatusLabel_RunTime
             // 
             this.toolStripStatusLabel_RunTime.Image = global::TagReader.Properties.Resources.alarm;
             this.toolStripStatusLabel_RunTime.Name = "toolStripStatusLabel_RunTime";
-            this.toolStripStatusLabel_RunTime.Size = new System.Drawing.Size(78, 17);
+            this.toolStripStatusLabel_RunTime.Size = new System.Drawing.Size(74, 18);
             this.toolStripStatusLabel_RunTime.Text = "Run Time";
             // 
             // toolStrip_ReaderSettings
@@ -594,41 +595,44 @@ namespace TagReader
             this.toolStripTextBox_Power,
             this.toolStripLabel_Frequency,
             this.toolStripComboBox_Frequency});
-            this.toolStrip_ReaderSettings.Location = new System.Drawing.Point(438, 22);
+            this.toolStrip_ReaderSettings.Location = new System.Drawing.Point(438, 24);
             this.toolStrip_ReaderSettings.Name = "toolStrip_ReaderSettings";
-            this.toolStrip_ReaderSettings.Size = new System.Drawing.Size(477, 29);
+            this.toolStrip_ReaderSettings.Size = new System.Drawing.Size(461, 27);
             this.toolStrip_ReaderSettings.TabIndex = 23;
             this.toolStrip_ReaderSettings.Text = "toolStrip2";
+            this.toolStrip_ReaderSettings.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip_ReaderSettings_ItemClicked);
             // 
             // toolStripLabel_Address
             // 
             this.toolStripLabel_Address.Name = "toolStripLabel_Address";
-            this.toolStripLabel_Address.Size = new System.Drawing.Size(59, 26);
+            this.toolStripLabel_Address.Size = new System.Drawing.Size(52, 24);
             this.toolStripLabel_Address.Text = "Address:";
             // 
             // toolStripTextBox_Address
             // 
             this.toolStripTextBox_Address.Name = "toolStripTextBox_Address";
-            this.toolStripTextBox_Address.Size = new System.Drawing.Size(120, 29);
+            this.toolStripTextBox_Address.Size = new System.Drawing.Size(120, 27);
             this.toolStripTextBox_Address.Click += new System.EventHandler(this.toolStripTextBox_Address_Click);
             // 
             // toolStripLabel_Power
             // 
             this.toolStripLabel_Power.Name = "toolStripLabel_Power";
-            this.toolStripLabel_Power.Size = new System.Drawing.Size(47, 26);
+            this.toolStripLabel_Power.Size = new System.Drawing.Size(43, 24);
             this.toolStripLabel_Power.Text = "Power:";
+            this.toolStripLabel_Power.Click += new System.EventHandler(this.toolStripLabel_Power_Click);
             // 
             // toolStripTextBox_Power
             // 
             this.toolStripTextBox_Power.Name = "toolStripTextBox_Power";
-            this.toolStripTextBox_Power.Size = new System.Drawing.Size(50, 29);
+            this.toolStripTextBox_Power.Size = new System.Drawing.Size(50, 27);
             this.toolStripTextBox_Power.Click += new System.EventHandler(this.toolStripTextBox_Power_Click);
             // 
             // toolStripLabel_Frequency
             // 
             this.toolStripLabel_Frequency.Name = "toolStripLabel_Frequency";
-            this.toolStripLabel_Frequency.Size = new System.Drawing.Size(70, 26);
+            this.toolStripLabel_Frequency.Size = new System.Drawing.Size(65, 24);
             this.toolStripLabel_Frequency.Text = "Frequency:";
+            this.toolStripLabel_Frequency.Click += new System.EventHandler(this.toolStripLabel_Frequency_Click);
             // 
             // toolStripComboBox_Frequency
             // 
@@ -650,15 +654,15 @@ namespace TagReader
             "924.125",
             "924.375"});
             this.toolStripComboBox_Frequency.Name = "toolStripComboBox_Frequency";
-            this.toolStripComboBox_Frequency.Size = new System.Drawing.Size(80, 29);
+            this.toolStripComboBox_Frequency.Size = new System.Drawing.Size(80, 27);
             this.toolStripComboBox_Frequency.Click += new System.EventHandler(this.toolStripComboBox_Frequency_Click);
             // 
             // FormTagReader
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(921, 590);
+            this.ClientSize = new System.Drawing.Size(921, 639);
             this.Controls.Add(this.toolStrip_ReaderSettings);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip_QuickAccess);

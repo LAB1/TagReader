@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -27,6 +28,14 @@ namespace TagReader
 
         LinkedList<String> SaveCombinedTimestamps = new LinkedList<String>();
         LinkedList<BitmapSource> SaveCombinedFrames = new LinkedList<BitmapSource>();
+
+        BinaryWriter binWriter = new BinaryWriter(new MemoryStream());
+        PixelFormat format = PixelFormats.Bgr32;
+
+        const int width = 424;
+        const int height = 512;
+        byte[] full_pixelData = new byte[width * height * (PixelFormats.Bgr32.BitsPerPixel + 7) / 8];
+
         public enum Mode
         {
             Color,

@@ -16,6 +16,9 @@ namespace TagReader
 {
     public partial class KinectDisplay : Form
     {
+
+
+
         public KinectDisplay(bool _isKinectDisplay)
         {
             if (_isKinectDisplay == false)
@@ -70,13 +73,21 @@ namespace TagReader
 
                             //SaveColorTimestamps.AddLast(DateTime.Now.ToString("hhmmssfff"));
                             //SaveColorFrames.AddLast(colorbitmap);
-                            SaveDepthTimestamps.AddLast((DateTime.Now - DateTime.Parse("1/1/1970 0:0:0")).TotalMilliseconds.ToString());
+                            String formated_date = (DateTime.Now - DateTime.Parse("1/1/1970 0:0:0")).TotalMilliseconds.ToString();
+                            SaveDepthTimestamps.AddLast(formated_date);
                             SaveDepthFrames.AddLast(depthbitmap);
                             
+
                             BitmapSource combinedbitmap = ToCombinedData(colorframe, depthframe);
-                            SaveCombinedTimestamps.AddLast((DateTime.Now - DateTime.Parse("1/1/1970 0:0:0")).TotalMilliseconds.ToString());
-                            SaveCombinedFrames.AddLast(combinedbitmap);                                                                                  
-                            
+                            SaveCombinedTimestamps.AddLast(formated_date);
+                            SaveCombinedFrames.AddLast(combinedbitmap);
+
+                            string temppath = System.IO.Path.Combine(@"../output/kinect/depthmatrix/", formated_date + ".txt");
+                            File.WriteAllLines(temppath , full_pixelData.Select(d => d.ToString()));
+                            //System.IO.File.WriteAllBytes(temppath, full_pixelData);
+
+
+
                         }
                     }
                 }
@@ -251,28 +262,64 @@ namespace TagReader
         {
             int width = frame.FrameDescription.Width;
             int height = frame.FrameDescription.Height;
-            PixelFormat format = PixelFormats.Bgr32;
+                                                                        PixelFormat format = PixelFormats.Bgr32;
 
-            byte[] pixels = new byte[width * height * ((format.BitsPerPixel + 7) / 8)];
+                                                                        byte[] pixels = new byte[width * height * ((format.BitsPerPixel + 7) / 8)];
 
-            if (frame.RawColorImageFormat == ColorImageFormat.Bgra)
-            {
-                frame.CopyRawFrameDataToArray(pixels);
-            }
-            else
-            {
-                frame.CopyConvertedFrameDataToArray(pixels, ColorImageFormat.Bgra);
-            }
+                                                                        if (frame.RawColorImageFormat == ColorImageFormat.Bgra)
+                                                                        {
+                                                                            frame.CopyRawFrameDataToArray(pixels);
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            frame.CopyConvertedFrameDataToArray(pixels, ColorImageFormat.Bgra);
+                                                                        }
 
-            int stride = width * format.BitsPerPixel / 8;
+                                                                        int stride = width * format.BitsPerPixel / 8;
 
-            return BitmapSource.Create(width, height, 96, 96, format, null, pixels, stride);
-        }
-        private BitmapSource ToBitmap1(DepthFrame frame)
-        {
-            int width = frame.FrameDescription.Width;
-            int height = frame.FrameDescription.Height;
-            PixelFormat format = PixelFormats.Bgr32;
+                                                                        return BitmapSource.Create(width, height, 96, 96, format, null, pixels, stride);
+                                                                    }
+                                                                    private BitmapSource ToBitmap1(DepthFrame frame)
+                                                                    {
+                                                                        int width = frame.FrameDescription.Width;
+                                                                        int height = frame.FrameDescription.Height;
+                                                                        PixelFormat format = PixelFormats.Bgr32;
+
+                                                                        ushort minDepth = frame.DepthMinReliableDistance;
+                                                                        ushort maxDepth = frame.DepthMaxReliableDistance;
+
+                                                                        ushort[] depthData = new ushort[width * height];
+                                                                        byte[] pixelData = new byte[width * height * (format.BitsPerPixel + 7) / 8];
+
+                                                                        frame.CopyFrameDataToArray(depthData);
+
+                                                                        int colorIndex = 0;
+                                                                        for (int depthIndex = 0; depthIndex < depthData.Length; ++depthIndex)
+                                                                        {
+                                                                            ushort depth = depthData[depthIndex];
+                                                                            byte intensity = (byte)(depth >= minDepth && depth <= maxDepth ? depth : 0);
+
+                                                                            pixelData[colorIndex++] = intensity; // Blue
+                                                                            full_pixelData[colorIndex] = (byte)depth; // Blue
+                                                                            pixelData[colorIndex++] = intensity; // Green
+                                                                            full_pixelData[colorIndex] = (byte)depth; // Green
+                                                                            pixelData[colorIndex++] = intensity; // Red
+                                                                            full_pixelData[colorIndex] = (byte)depth; //Red
+
+                                                                            ++colorIndex;
+                                                                        }
+
+                                                                        int stride = width * format.BitsPerPixel / 8;
+
+                                                                        return BitmapSource.Create(width, height, 96, 96, format, null, pixelData, stride);
+                                                                    }
+
+                                                                    // Convert a DepthFrame to an ImageSource
+                                                                    private ImageSource ToBitmap(DepthFrame frame)
+                                                                    {
+                                                                        int width = frame.FrameDescription.Width;
+                                                                        int height = frame.FrameDescription.Height;
+                                                                        PixelFormat format = PixelFormats.Bgr32;
 
             ushort minDepth = frame.DepthMinReliableDistance;
             ushort maxDepth = frame.DepthMaxReliableDistance;
@@ -289,41 +336,12 @@ namespace TagReader
                 byte intensity = (byte)(depth >= minDepth && depth <= maxDepth ? depth : 0);
 
                 pixelData[colorIndex++] = intensity; // Blue
+                full_pixelData[colorIndex] = (byte)depth; // Blue
                 pixelData[colorIndex++] = intensity; // Green
+                full_pixelData[colorIndex] = (byte)depth; // Green
                 pixelData[colorIndex++] = intensity; // Red
+                full_pixelData[colorIndex] = (byte)depth; //Red
 
-                ++colorIndex;
-            }
-
-            int stride = width * format.BitsPerPixel / 8;
-
-            return BitmapSource.Create(width, height, 96, 96, format, null, pixelData, stride);
-        }
-
-        // Convert a DepthFrame to an ImageSource
-        private ImageSource ToBitmap(DepthFrame frame)
-        {
-            int width = frame.FrameDescription.Width;
-            int height = frame.FrameDescription.Height;
-            PixelFormat format = PixelFormats.Bgr32;
-
-            ushort minDepth = frame.DepthMinReliableDistance;
-            ushort maxDepth = frame.DepthMaxReliableDistance;
-
-            ushort[] depthData = new ushort[width * height];
-            byte[] pixelData = new byte[width * height * (format.BitsPerPixel + 7) / 8];
-
-            frame.CopyFrameDataToArray(depthData);
-
-            int colorIndex = 0;
-            for (int depthIndex = 0; depthIndex < depthData.Length; ++depthIndex)
-            {
-                ushort depth = depthData[depthIndex];
-                byte intensity = (byte)(depth >= minDepth && depth <= maxDepth ? depth : 0);
-
-                pixelData[colorIndex++] = intensity; // Blue
-                pixelData[colorIndex++] = intensity; // Green
-                pixelData[colorIndex++] = intensity; // Red
 
                 ++colorIndex;
             }
@@ -387,21 +405,33 @@ namespace TagReader
 
             _sensor.CoordinateMapper.MapDepthFrameToColorSpace(_depthData, _colorSpacePoints);
 
+            int dcolorIndex = 0;
             for (int depthY = 0; depthY < depthHeight; depthY++)
             {
                 for (int depthX = 0; depthX < depthWidth; depthX++)
                 {
                     int depthIndex = depthY * depthWidth + depthX;
+                    ushort depth = _depthData[depthIndex];
+
+                    full_pixelData[dcolorIndex++] = (byte)depth; // Blue
+                    full_pixelData[dcolorIndex++] = (byte)depth; // Green
+                    full_pixelData[dcolorIndex++] = (byte)depth; //Red
+
                     int colorX = (int)(_colorSpacePoints[depthIndex].X + 0.5);
                     int colorY = (int)(_colorSpacePoints[depthIndex].Y + 0.5);
+                    int colorIndex = colorY * colorwidth + colorX;
+
+                    
                     if ((0 <= colorX) && (colorX < colorwidth) && (0 <= colorY) && (colorY < colorheight))
                     {
-                        int colorIndex = colorY * colorwidth + colorX;
+                        
                         pixels[depthIndex * bytesPerPixel + 0] = _colorFrameData[colorIndex * bytesPerPixel + 0];
                         pixels[depthIndex * bytesPerPixel + 1] = _colorFrameData[colorIndex * bytesPerPixel + 1];
                         pixels[depthIndex * bytesPerPixel + 2] = _colorFrameData[colorIndex * bytesPerPixel + 2];
                         pixels[depthIndex * bytesPerPixel + 3] = _colorFrameData[colorIndex * bytesPerPixel + 3];
                     }
+
+                    ++dcolorIndex;
                 }
             }
 

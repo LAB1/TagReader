@@ -522,5 +522,25 @@ namespace TagReader
             
             
         }
+
+        private void toolStrip_ReaderSettings_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripLabel_Power_Click(object sender, EventArgs e)
+        {
+            StartKinect();
+        }
+
+        private void toolStripLabel_Frequency_Click(object sender, EventArgs e)
+        {
+            kinectComp.kill();
+        }
     } // end FormTagReader
 } // end namespace
