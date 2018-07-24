@@ -29,12 +29,14 @@ namespace TagReader
         LinkedList<String> SaveCombinedTimestamps = new LinkedList<String>();
         LinkedList<BitmapSource> SaveCombinedFrames = new LinkedList<BitmapSource>();
 
-        BinaryWriter binWriter = new BinaryWriter(new MemoryStream());
+        LinkedList<String> SaveXYZTimestamps = new LinkedList<String>();
+        LinkedList<CameraSpacePoint[]> SaveCameraSpacePoints= new LinkedList<CameraSpacePoint[]>();
+
         PixelFormat format = PixelFormats.Bgr32;
 
         const int width = 424;
         const int height = 512;
-        byte[] full_pixelData = new byte[width * height * (PixelFormats.Bgr32.BitsPerPixel + 7) / 8];
+        byte[] full_pixelData = new byte[width * height];
 
         public enum Mode
         {
