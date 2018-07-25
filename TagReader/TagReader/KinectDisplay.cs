@@ -82,11 +82,11 @@ namespace TagReader
                             SaveCombinedTimestamps.AddLast(formated_date);
                             SaveCombinedFrames.AddLast(combinedbitmap);
 
-                            string temppath = System.IO.Path.Combine(@"../output/kinect/depthmatrix/", formated_date + ".txt");
-                            File.WriteAllLines(temppath, full_pixelData.Select(d => d.ToString()));
+                            //string temppath = System.IO.Path.Combine(@"../output/kinect/depthmatrix/", formated_date + ".txt");
+                            //File.WriteAllLines(temppath, full_pixelData.Select(d => d.ToString()));
                             //System.IO.File.WriteAllBytes(temppath, full_pixelData);
 
-                            string temppath1 = System.IO.Path.Combine(@"../output/kinect/3dpointmatrix/", formated_date + ".txt");
+                            
 
                             
                         }
@@ -199,6 +199,7 @@ namespace TagReader
                 }
 
             }
+            a.Dispose();
 
             SaveDepthTimestamps.Clear();
             SaveDepthFrames.Clear();
@@ -221,36 +222,51 @@ namespace TagReader
             SaveCombinedFrames.Clear();
 
             a.Dispose();
-            this.Close();
+
 
             a = SaveXYZTimestamps.GetEnumerator();
-            
-                foreach (CameraSpacePoint[] node in SaveCameraSpacePoints)
+            foreach (CameraSpacePoint[] node in SaveCameraSpacePoints)
+            {
+                a.MoveNext();
+                string temppath = System.IO.Path.Combine(@"../output/kinect/XYZmatrix/", a.Current + ".txt");
+                using (System.IO.StreamWriter file =
+                        new System.IO.StreamWriter(temppath, true))
                 {
-                    a.MoveNext();
-                    string temppath = System.IO.Path.Combine(@"../output/kinect/XYZmatrix/", a.Current + ".txt");
-                    using (System.IO.StreamWriter file =
-                            new System.IO.StreamWriter(temppath, true))
+                    for (int depthY = 0; depthY < height; depthY++)
                     {
-                        for (int depthY = 0; depthY < height; depthY++)
+                        for (int depthX = 0; depthX < width; depthX++)
                         {
-                            for (int depthX = 0; depthX < width; depthX++)
-                            {
-                                float x = node[depthY * depthX].X;
-                                float y = node[depthY * depthX].Y;
-                                float z = node[depthY * depthX].Z;
+                            int depthIndex = depthY * width + depthX;
 
-                                file.WriteLine("{0} {0} {0},", x.ToString(), y.ToString(), z.ToString());
-                            }
+                            float x = node[depthIndex].X;
+                            float y = node[depthIndex].Y;
+                            float z = node[depthIndex].Z;
 
-
+                            file.WriteLine("{0:.4f} {1:.4f} {2:.4f},", x.ToString(), y.ToString(), z.ToString());
                         }
-                }
-            }
 
-            
+
+                    }
+                }
+
+            }
+            a.Dispose();
+
+
+            a = SaveDepthMatrixTimestamp.GetEnumerator();
+            foreach (ushort[] node in SaveDepthMatrix)
+            {
+                a.MoveNext();
+                string temppath = System.IO.Path.Combine(@"../output/kinect/depthmatrix/", a.Current + ".txt");
+                File.WriteAllLines(temppath, node.Select(d => d.ToString()));
+            }
+            SaveDepthMatrixTimestamp.Clear();
+            SaveDepthMatrix.Clear();
+
+            a.Dispose();
+            this.Close();
         }
-        
+
         private Bitmap BitmapFromSource(BitmapSource bitmapsource)
         {
             Bitmap bitmap;
@@ -361,9 +377,7 @@ namespace TagReader
                 byte intensity = (byte)(depth >= minDepth && depth <= maxDepth ? depth : 0);
 
                 pixelData[colorIndex++] = intensity; // Blue
-
                 pixelData[colorIndex++] = intensity; // Green
-
                 pixelData[colorIndex++] = intensity; // Red
 
 
@@ -427,7 +441,12 @@ namespace TagReader
             colorFrame.CopyConvertedFrameDataToArray(_colorFrameData, ColorImageFormat.Bgra);
 
             depthFrame.CopyFrameDataToArray(_depthData);
+
+            byte[] full_pixelData = new byte[depthHeight * depthWidth];
+           
             Buffer.BlockCopy(_depthData, 0, full_pixelData, 0, depthWidth * depthHeight);
+            SaveDepthMatrixTimestamp.AddLast(formated_date);
+            SaveDepthMatrix.AddLast(_depthData);
 
             _sensor.CoordinateMapper.MapDepthFrameToColorSpace(_depthData, _colorSpacePoints);
 
